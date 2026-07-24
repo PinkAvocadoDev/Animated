@@ -26,5 +26,10 @@ class AnimatedWindow(Adw.ApplicationWindow):
 
     label = Gtk.Template.Child()
 
+    button_select = Gtk.Template.Child()
+    button_go = Gtk.Template.Child()
+    width_input = Gtk.Template.Child()
+    fps_input = Gtk.Template.Child()
+
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
