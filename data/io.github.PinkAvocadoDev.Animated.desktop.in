@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=animated
+Exec=animated
+Icon=io.github.PinkAvocadoDev.Animated
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=GTK;
+StartupNotify=true
+DBusActivatable=true

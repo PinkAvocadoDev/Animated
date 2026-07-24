@@ -1,0 +1,8 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+data/io.github.PinkAvocadoDev.Animated.desktop.in
+data/io.github.PinkAvocadoDev.Animated.metainfo.xml.in
+data/io.github.PinkAvocadoDev.Animated.gschema.xml
+src/main.py
+src/window.py
+src/window.ui
