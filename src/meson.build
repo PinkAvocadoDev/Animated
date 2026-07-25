@@ -30,6 +30,7 @@ animated_sources = [
   '__init__.py',
   'main.py',
   'window.py',
+  'logger.py'
 ]
 
 install_data(animated_sources, install_dir: moduledir)

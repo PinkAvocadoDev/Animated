@@ -1,15 +1,24 @@
 {
     "id" : "io.github.PinkAvocadoDev.Animated",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "master",
+    "runtime-version" : "47",
     "sdk" : "org.gnome.Sdk",
+    "add-extensions": {
+        "org.freedesktop.Platform.ffmpeg-full": {
+            "directory": "lib/ffmpeg",
+            "version": "24.08",
+            "add-ld-path": "."
+        }
+    },
     "command" : "animated",
     "finish-args" : [
+        "--env=PATH=/app/bin:/usr/bin:/app/lib/ffmpeg",
         "--share=network",
         "--share=ipc",
         "--socket=fallback-x11",
         "--device=dri",
-        "--socket=wayland"
+        "--socket=wayland",
+        "--filesystem=xdg-videos"
     ],
     "cleanup" : [
         "/include",
@@ -23,14 +32,17 @@
         "*.a"
     ],
     "modules" : [
+        "python3-build-deps.json",
+        "python3-moviepy.json",
+        "python3-pyyaml.json",
         {
             "name" : "animated",
             "builddir" : true,
             "buildsystem" : "meson",
             "sources" : [
                 {
-                    "type" : "git",
-                    "url" : "file:///home/andrea/Builder Projects"
+                    "type" : "dir",
+                    "path" : "."
                 }
             ]
         }
