@@ -6,3 +6,4 @@ data/io.github.PinkAvocadoDev.Animated.gschema.xml
 src/main.py
 src/window.py
 src/window.ui
+src/logger.py

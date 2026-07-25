@@ -1,6 +1,6 @@
 # main.py
 #
-# Copyright 2026 Andrea
+# Copyright 2026 PinkAvocadoDev
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -24,7 +24,7 @@ gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
 from gi.repository import Gtk, Gio, Adw
-from .window import AnimatedWindow
+from .window import AnimatedWindow, PreferencesDialog
 
 
 class AnimatedApplication(Adw.Application):
@@ -51,18 +51,19 @@ class AnimatedApplication(Adw.Application):
 
     def on_about_action(self, *args):
         """Callback for the app.about action."""
-        about = Adw.AboutDialog(application_name='animated',
+        about = Adw.AboutDialog(application_name='Animated',
                                 application_icon='io.github.PinkAvocadoDev.Animated',
-                                developer_name='Andrea',
-                                version='0.1.0',
-                                developers=['Andrea'],
-                                copyright='© 2026 Andrea')
+                                developer_name='PinkAvocadoDev',
+                                version='1.0.0',
+                                developers=['PinkAvocadoDev'],
+                                copyright='© 2026 PinkAvocadoDev')
         # Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
         about.set_translator_credits(_('translator-credits'))
         about.present(self.props.active_window)
 
     def on_preferences_action(self, widget, _):
-        """Callback for the app.preferences action."""
+        pref = PreferencesDialog(self)
+        pref.present()
         print('app.preferences action activated')
 
     def create_action(self, name, callback, shortcuts=None):
