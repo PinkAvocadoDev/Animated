@@ -56,7 +56,8 @@ class AnimatedApplication(Adw.Application):
                                 developer_name='PinkAvocadoDev',
                                 version='1.0.0',
                                 developers=['PinkAvocadoDev'],
-                                copyright='© 2026 PinkAvocadoDev')
+                                copyright='© 2026 PinkAvocadoDev',
+                                comments=_("This app can be resource hungry, be mindful of your machines limits!"))
         # Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
         about.set_translator_credits(_('translator-credits'))
         about.present(self.props.active_window)
