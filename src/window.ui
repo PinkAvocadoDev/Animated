@@ -5,7 +5,7 @@
   <template class="AnimatedWindow" parent="AdwApplicationWindow">
     <property name="title" translatable="yes">Animated</property>
     <property name="default-width">480</property>
-    <property name="default-height">600</property>
+    <property name="default-height">720</property>
     <property name="resizable">False</property>
     <property name="content">
       <object class="AdwToastOverlay" id="toast_overlay">
@@ -29,6 +29,17 @@
                 <property name="spacing">16</property>
                 <property name="halign">center</property>
                 <property name="valign">center</property>
+                <child>
+                  <object class="GtkImage">
+                    <property name="name">logo</property>
+                    <property name="icon-name">io.github.PinkAvocadoDev.Animated</property>
+                    <property name="pixel-size">120</property>
+                    <property name="margin-bottom">0</property>
+                    <style>
+                      <class name="icon-dropshadow"/>
+                    </style>
+                  </object>
+                </child>
                 <child>
                   <object class="GtkLabel" id="title">
                     <property name="label" translatable="yes">Animated👻</property>
